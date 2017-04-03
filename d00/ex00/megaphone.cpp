@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 int main(int ac, char **av)
 {
@@ -10,9 +11,8 @@ int main(int ac, char **av)
 		for (int i = 1; i < ac; i++)
 			s += av[i];
 	}
-	for (std::string::iterator i = s.begin(); i != s.end(); i++) {
-		*i = std::toupper(*i);
-	}
-	std::cout << s << "\n";
+	for (size_t i = 0; i < s.length(); i++)
+		s[i] = std::toupper(s[i]);
+	std::cout << std::uppercase << s << "\n";
 	return 0;
 }
