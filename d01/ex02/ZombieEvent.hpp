@@ -1,19 +1,22 @@
 #ifndef ZOMBIEEVENT_HPP
 #define ZOMBIEEVENT_HPP
 
+#include "Zombie.hpp"
 #include <iostream>
 
 class ZombieEvent {
 
 public:
-	Zombie(std::string name, std::string type);
-	~Zombie();
+	ZombieEvent();
+	~ZombieEvent();
 
-	void announce();
+	void setZombieType(std::string name);
+	Zombie* newZombie(std::string name);
+
+	void randomChump(void);
 
 private:
 	std::string _type;
-	std::string _name;
 };
 
 #endif

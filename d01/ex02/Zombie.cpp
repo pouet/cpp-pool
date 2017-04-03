@@ -1,10 +1,8 @@
 #include <iostream>
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type)
+Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type)
 {
-	this->_name = name;
-	this->_type = type;
 }
 
 Zombie::~Zombie()
@@ -13,5 +11,5 @@ Zombie::~Zombie()
 
 void Zombie::announce()
 {
-	std::cout << "<" << this->_name << " (" << this->_type << ")> Braiiiiiiinnnnnnnnnns..." << std::endl;
+	std::cout << "<" << _name << " (" << _type << ")> Braiiiiiiinnnnnnnnnns..." << std::endl;
 }

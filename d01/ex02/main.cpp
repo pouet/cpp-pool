@@ -1,10 +1,25 @@
+#include <cstdlib>
 #include <iostream>
-#include "Zombie.hpp"
+#include "ZombieEvent.hpp"
 
 int main(void)
 {
-	Zombie z("noname", "notype");
+	ZombieEvent ze;
 
-	z.announce();
+	srand(time(NULL));
+
+	ze.setZombieType("nothing");
+	Zombie* z = ze.newZombie("name");
+	z->announce();
+	delete z;
+
+	ze.setZombieType("the void");
+	ze.randomChump();
+	ze.setZombieType("poney");
+	ze.randomChump();
+	ze.setZombieType("a zombie");
+	ze.randomChump();
+	ze.randomChump();
+
 	return 0;
 }
