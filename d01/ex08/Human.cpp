@@ -14,7 +14,6 @@ void Human::intimidatingShout(std::string const & target) {
 }
 
 void Human::action(std::string const & action_name, std::string const & target) {
-	typedef void (Human::*t)(std::string const &);
 	struct {
 		std::string name;
 		void (Human::*f)(std::string const &);
