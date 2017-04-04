@@ -10,7 +10,7 @@ HumanB::~HumanB(void)
 {
 }
 
-void HumanB::attack(void)
+void HumanB::attack(void) const
 {
 	std::cout << _name << " attacks with his " << _weap->getType() << std::endl;
 }

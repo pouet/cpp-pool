@@ -12,11 +12,11 @@ Zombie::Zombie(void) : _type("Poneys")
 	_name = names[rand() % (sizeof names / sizeof *names)];
 }
 
-Zombie::~Zombie()
+Zombie::~Zombie(void)
 {
 }
 
-void Zombie::announce()
+void Zombie::announce(void)
 {
 	std::cout << "<" << _name << " (" << _type << ")> Braiiiiiiinnnnnnnnnns..." << std::endl;
 }

@@ -9,7 +9,7 @@ public:
 	ZombieHorde(int n);
 	~ZombieHorde(void);
 
-	void announce(void);
+	void announce(void) const;
 
 private:
 	int _sz;

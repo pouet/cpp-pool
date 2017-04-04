@@ -7,11 +7,11 @@
 class ZombieEvent {
 
 public:
-	ZombieEvent();
-	~ZombieEvent();
+	ZombieEvent(void);
+	~ZombieEvent(void);
 
 	void setZombieType(std::string name);
-	Zombie* newZombie(std::string name);
+	Zombie* newZombie(std::string name) const;
 
 	void randomChump(void);
 

@@ -10,7 +10,7 @@ HumanA::~HumanA(void)
 {
 }
 
-void HumanA::attack(void)
+void HumanA::attack(void) const
 {
 	std::cout << _name << " attacks with his " << _weap.getType() << std::endl;
 }

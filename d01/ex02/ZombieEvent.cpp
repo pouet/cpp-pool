@@ -1,11 +1,11 @@
 #include <cstdlib>
 #include "ZombieEvent.hpp"
 
-ZombieEvent::ZombieEvent() : _type("poney")
+ZombieEvent::ZombieEvent(void) : _type("poney")
 {
 }
 
-ZombieEvent::~ZombieEvent()
+ZombieEvent::~ZombieEvent(void)
 {
 }
 
@@ -14,7 +14,7 @@ void ZombieEvent::setZombieType(std::string type)
 	_type = type;
 }
 
-Zombie* ZombieEvent::newZombie(std::string name)
+Zombie* ZombieEvent::newZombie(std::string name) const
 {
 	return new Zombie(name, _type);
 }

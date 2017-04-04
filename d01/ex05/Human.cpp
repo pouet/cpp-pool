@@ -14,7 +14,7 @@ Brain& Human::getBrain(void)
 	return _brain;
 }
 
-std::string Human::identify(void)
+std::string Human::identify(void) const
 {
 	return _brain.identify();
 }

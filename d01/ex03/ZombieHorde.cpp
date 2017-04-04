@@ -12,7 +12,7 @@ ZombieHorde::~ZombieHorde(void)
 	std::cout << "Horde destroyed !" << std::endl;
 }
 
-void ZombieHorde::announce(void)
+void ZombieHorde::announce(void) const
 {
 	for (int i = 0; i < _sz; i++)
 		_horde[i].announce();

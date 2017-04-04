@@ -9,8 +9,11 @@ public:
 	Brain(void);
 	~Brain(void);
 
-	std::string identify(void);
+	std::string identify(void) const;
+	int getIq(void) const;
+
 private:
+	int _iq;
 };
 
 #endif

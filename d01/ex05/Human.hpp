@@ -11,7 +11,7 @@ public:
 	~Human(void);
 
 	Brain& getBrain(void);
-	std::string identify(void);
+	std::string identify(void) const;
 
 private:
 	Brain _brain;

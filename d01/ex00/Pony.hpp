@@ -7,11 +7,11 @@ public:
 	Pony();
 	~Pony();
 
-	void ponyOnTheHeap();
-	void ponyOnTheStack();
+	void ponyOnTheHeap() const;
+	void ponyOnTheStack() const;
 
 private:
-	void do_some_struff();
+	void do_some_struff() const;
 };
 
 #endif
