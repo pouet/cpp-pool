@@ -2,10 +2,10 @@
 #include <Phonebook.class.hpp>
 #include <Contact.class.hpp>
 
-void getstring(std::string prompt, std::string &s)
+void getstring(std::string prompt, std::string& s)
 {
 	std::cout << prompt;
-	getline(std::cin, s);
+	std::getline(std::cin, s);
 }
 
 void command_add(Phonebook &book)
@@ -14,7 +14,7 @@ void command_add(Phonebook &book)
 	std::string s;
 
 	if (book.is_full()) {
-		std::cout << "Phonebook is full. Can't add new contact.\n";
+		std::cout << "Phonebook is full. Can't add new contact." << std::endl;
 		return;
 	}
 
@@ -22,7 +22,7 @@ void command_add(Phonebook &book)
 	c.set_first_name(s);
 	getstring("Enter last name : ", s);
 	c.set_last_name(s);
-	getstring("Enter nickname name : ", s);
+	getstring("Enter nickname : ", s);
 	c.set_nickname(s);
 	getstring("Enter login : ", s);
 	c.set_login(s);
@@ -42,7 +42,7 @@ void command_add(Phonebook &book)
 	c.set_darkest_secret(s);
 
 	book.add_contact(c);
-	std::cout << "Contact successfully added !\n";
+	std::cout << "Contact successfully added !" << std::endl;
 }
 
 void command_search(Phonebook &book)
@@ -57,7 +57,7 @@ void command_search(Phonebook &book)
 
 	if (s.length() != 1 || s[0] < '0' || s[0] > '7' ||
 		(s[0] - '0') >= book.get_ncontacts())
-		std::cout << "Invalid index\n";
+		std::cout << "Invalid index" << std::endl;
 	else
 		book.print_entry(s[0] - '0');
 }
@@ -71,7 +71,7 @@ int main(void)
 		getstring("Enter a command : ", s);
 
 		if (std::cin.fail()) {
-			std::cout << "\n";
+			std::cout << std::endl;
 			break;
 		}
 		else {
@@ -84,10 +84,10 @@ int main(void)
 				command_search(book);
 			}
 			else {
-				std::cout << "Possibles commands are :\n";
-				std::cout << " - ADD : add new contact\n";
-				std::cout << " - SEARCH : search for a contact\n";
-				std::cout << " - EXIT : exit this program\n";
+				std::cout << "Possibles commands are :" << std::endl;
+				std::cout << " - ADD : add new contact" << std::endl;
+				std::cout << " - SEARCH : search for a contact" << std::endl;
+				std::cout << " - EXIT : exit this program" << std::endl;
 			}
 		}
 	}

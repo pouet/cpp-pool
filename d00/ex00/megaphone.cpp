@@ -13,6 +13,6 @@ int main(int ac, char **av)
 	}
 	for (size_t i = 0; i < s.length(); i++)
 		s[i] = std::toupper(s[i]);
-	std::cout << std::uppercase << s << "\n";
+	std::cout << s << "\n";
 	return 0;
 }
