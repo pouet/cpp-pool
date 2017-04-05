@@ -17,17 +17,17 @@ public:
 	void vaulthunter_dot_exe(std::string const & target);
 
 private:
-	int _hitpt;
-	int _maxhitpt;
-	int _nrjpt;
-	int _maxnrjpt;
+	unsigned int _hitpt;
+	unsigned int _maxhitpt;
+	unsigned int _nrjpt;
+	unsigned int _maxnrjpt;
 
-	int _lvl;
+	unsigned int _lvl;
 	std::string _name;
 
-	int _meleedmg;
-	int _rangedmg;
-	int _armorreduc;
+	unsigned int _meleedmg;
+	unsigned int _rangedmg;
+	unsigned int _armorreduc;
 };
 
 #endif
