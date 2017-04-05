@@ -14,9 +14,12 @@ void Cat9tails::_doStuff(std::istream& in)
 {
 	char buf[1025] = "";
 
-	while (!in.eof() && !in.fail()) {
+	while (true) {
 		in.getline(buf, 1024);
-		std::cout << buf << std::endl;
+		std::cout << buf;
+		if (in.eof() || in.fail())
+			break;
+		std::cout << std::endl;
 	}
 }
 
