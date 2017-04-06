@@ -3,19 +3,21 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void)
+	: _hitpt(100), _maxhitpt(100), _nrjpt(100), _maxnrjpt(100), _lvl(1),
+	_name("nobody"), _meleedmg(10), _rangedmg(10), _armorreduc(0)
 {
-	std::cout << "SC@V-TP is born !" << std::endl;
+	std::cout << "CL@P-TP is born !" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "SC@V-TP " << _name << " ended !" << std::endl;
+	std::cout << "CL@P-TP " << _name << " ended !" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src)
 {
 	*this = src;
-	std::cout << "SC@V-TP " << _name << " is being copied !" << std::endl;
+	std::cout << "CL@P-TP " << _name << " is being copied !" << std::endl;
 }
 
 ClapTrap & ClapTrap::operator=(ClapTrap const & rhs)
