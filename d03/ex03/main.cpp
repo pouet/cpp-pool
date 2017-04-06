@@ -1,14 +1,14 @@
 #include <cstdlib>
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
 	FragTrap t("toto");
-	FragTrap c = t;
+	ScavTrap s("spongebob");
 
 	srand(time(NULL));
 
-	c.vaulthunter_dot_exe("fluttershy");
 	t.takeDamage(15);
 	t.takeDamage(94);
 	t.takeDamage(15);
@@ -21,5 +21,11 @@ int main(void)
 	t.vaulthunter_dot_exe("rainbowdash");
 	t.vaulthunter_dot_exe("rainbowdash");
 	t.vaulthunter_dot_exe("rainbowdash");
+
+	s.challengeNewcomer();
+	s.challengeNewcomer();
+	s.challengeNewcomer();
+	s.challengeNewcomer();
+	s.challengeNewcomer();
 	return 0;
 }

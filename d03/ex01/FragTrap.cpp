@@ -9,9 +9,75 @@ FragTrap::FragTrap(std::string name)
 	std::cout << "FR4G-TP " << _name << " is born !" << std::endl;
 }
 
+FragTrap::FragTrap(FragTrap const & src)
+{
+	*this = src;
+	std::cout << "FR4G-TP " << _name << " is being copied !" << std::endl;
+}
+
 FragTrap::~FragTrap(void)
 {
 	std::cout << "FR4G-TP " << _name << " ended !" << std::endl;
+}
+
+FragTrap & FragTrap::operator=(FragTrap const & rhs)
+{
+	_hitpt = rhs.getHitpt();
+	_maxhitpt = rhs.getMaxhitpt();
+	_nrjpt = rhs.getNrjpt();
+	_maxnrjpt = rhs.getMaxnrjpt();
+	_lvl = rhs.getLvl();
+	_name = rhs.getName();
+	_meleedmg = rhs.getMeleedmg();
+	_rangedmg = rhs.getRangedmg();
+	_armorreduc = rhs.getArmorreduc();
+
+	return *this;
+}
+
+unsigned int FragTrap::getHitpt(void) const
+{
+	return _hitpt;
+}
+
+unsigned int FragTrap::getMaxhitpt(void) const
+{
+	return _maxhitpt;
+}
+
+unsigned int FragTrap::getNrjpt(void) const
+{
+	return _nrjpt;
+}
+
+unsigned int FragTrap::getMaxnrjpt(void) const
+{
+	return _maxnrjpt;
+}
+
+unsigned int FragTrap::getLvl(void) const
+{
+	return _lvl;
+}
+
+std::string  FragTrap::getName(void) const
+{
+	return _name;
+}
+
+unsigned int FragTrap::getMeleedmg(void) const
+{
+	return _meleedmg;
+}
+
+unsigned int FragTrap::getRangedmg(void) const
+{
+	return _rangedmg;
+}
+
+unsigned int FragTrap::getArmorreduc(void) const
+{
+	return _armorreduc;
 }
 
 void FragTrap::rangedAttack(std::string const & target)

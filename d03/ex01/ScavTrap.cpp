@@ -9,9 +9,75 @@ ScavTrap::ScavTrap(std::string name)
 	std::cout << "SC@V-TP " << _name << " is born !" << std::endl;
 }
 
+ScavTrap::ScavTrap(ScavTrap const & src)
+{
+	*this = src;
+	std::cout << "SC@V-TP " << _name << " is being copied !" << std::endl;
+}
+
 ScavTrap::~ScavTrap(void)
 {
 	std::cout << "SC@V-TP " << _name << " ended !" << std::endl;
+}
+
+ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
+{
+	_hitpt = rhs.getHitpt();
+	_maxhitpt = rhs.getMaxhitpt();
+	_nrjpt = rhs.getNrjpt();
+	_maxnrjpt = rhs.getMaxnrjpt();
+	_lvl = rhs.getLvl();
+	_name = rhs.getName();
+	_meleedmg = rhs.getMeleedmg();
+	_rangedmg = rhs.getRangedmg();
+	_armorreduc = rhs.getArmorreduc();
+
+	return *this;
+}
+
+unsigned int ScavTrap::getHitpt(void) const
+{
+	return _hitpt;
+}
+
+unsigned int ScavTrap::getMaxhitpt(void) const
+{
+	return _maxhitpt;
+}
+
+unsigned int ScavTrap::getNrjpt(void) const
+{
+	return _nrjpt;
+}
+
+unsigned int ScavTrap::getMaxnrjpt(void) const
+{
+	return _maxnrjpt;
+}
+
+unsigned int ScavTrap::getLvl(void) const
+{
+	return _lvl;
+}
+
+std::string  ScavTrap::getName(void) const
+{
+	return _name;
+}
+
+unsigned int ScavTrap::getMeleedmg(void) const
+{
+	return _meleedmg;
+}
+
+unsigned int ScavTrap::getRangedmg(void) const
+{
+	return _rangedmg;
+}
+
+unsigned int ScavTrap::getArmorreduc(void) const
+{
+	return _armorreduc;
 }
 
 void ScavTrap::rangedAttack(std::string const & target)

@@ -12,70 +12,9 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "SC@V-TP " << _name << " ended !" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const & src)
-{
-	*this = src;
-	std::cout << "SC@V-TP " << _name << " is being copied !" << std::endl;
-}
-
-ClapTrap & ClapTrap::operator=(ClapTrap const & rhs)
-{
-	_hitpt = rhs.getHitpt();
-	_maxhitpt = rhs.getMaxhitpt();
-	_nrjpt = rhs.getNrjpt();
-	_maxnrjpt = rhs.getMaxnrjpt();
-	_lvl = rhs.getLvl();
-	_name = rhs.getName();
-	_meleedmg = rhs.getMeleedmg();
-	_rangedmg = rhs.getRangedmg();
-	_armorreduc = rhs.getArmorreduc();
-
-	return *this;
-}
-
-unsigned int ClapTrap::getHitpt(void) const
-{
-	return _hitpt;
-}
-
-unsigned int ClapTrap::getMaxhitpt(void) const
-{
-	return _maxhitpt;
-}
-
-unsigned int ClapTrap::getNrjpt(void) const
-{
-	return _nrjpt;
-}
-
-unsigned int ClapTrap::getMaxnrjpt(void) const
-{
-	return _maxnrjpt;
-}
-
-unsigned int ClapTrap::getLvl(void) const
-{
-	return _lvl;
-}
-
-std::string  ClapTrap::getName(void) const
+std::string ClapTrap::getName(void) const
 {
 	return _name;
-}
-
-unsigned int ClapTrap::getMeleedmg(void) const
-{
-	return _meleedmg;
-}
-
-unsigned int ClapTrap::getRangedmg(void) const
-{
-	return _rangedmg;
-}
-
-unsigned int ClapTrap::getArmorreduc(void) const
-{
-	return _armorreduc;
 }
 
 void ClapTrap::rangedAttack(std::string const & target)

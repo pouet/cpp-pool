@@ -7,7 +7,13 @@ int main(void)
 	FragTrap t("toto");
 	ScavTrap s("spongebob");
 
+	FragTrap c = t;
+	ScavTrap d = s;
+
 	srand(time(NULL));
+
+	c.vaulthunter_dot_exe("fluttershy");
+	d.challengeNewcomer();
 
 	t.takeDamage(15);
 	t.takeDamage(94);
@@ -27,5 +33,6 @@ int main(void)
 	s.challengeNewcomer();
 	s.challengeNewcomer();
 	s.challengeNewcomer();
+
 	return 0;
 }
