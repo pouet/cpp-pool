@@ -13,12 +13,12 @@ ScavTrap::ScavTrap(std::string name)
 	_meleedmg = 20;
 	_rangedmg = 15;
 	_armorreduc = 3;
-	std::cout << "CL@P-TP " << _name << " is born !" << std::endl;
+	std::cout << "SC@V-TP " << _name << " is born !" << std::endl;
 }
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "CL@P-TP " << _name << " ended !" << std::endl;
+	std::cout << "SC@V-TP " << _name << " ended !" << std::endl;
 }
 
 void ScavTrap::challengeNewcomer(void)
