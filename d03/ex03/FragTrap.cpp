@@ -16,6 +16,12 @@ FragTrap::FragTrap(std::string name)
 	std::cout << "FR4G-TP " << _name << " is born !" << std::endl;
 }
 
+FragTrap::FragTrap(FragTrap const & src)
+{
+	*this = src;
+	std::cout << "FR4G-TP " << _name << " is being copied !" << std::endl;
+}
+
 FragTrap::~FragTrap(void)
 {
 	std::cout << "FR4G-TP " << _name << " ended !" << std::endl;

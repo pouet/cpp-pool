@@ -16,6 +16,12 @@ NinjaTrap::NinjaTrap(std::string name)
 	std::cout << "NINJ@-TP " << _name << " is born !" << std::endl;
 }
 
+NinjaTrap::NinjaTrap(NinjaTrap const & src)
+{
+	*this = src;
+	std::cout << "NINJ@-TP " << _name << " is being copied !" << std::endl;
+}
+
 NinjaTrap::~NinjaTrap(void)
 {
 	std::cout << "NINJ@-TP " << _name << " ended !" << std::endl;

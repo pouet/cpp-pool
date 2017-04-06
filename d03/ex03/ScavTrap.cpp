@@ -16,6 +16,12 @@ ScavTrap::ScavTrap(std::string name)
 	std::cout << "SC@V-TP " << _name << " is born !" << std::endl;
 }
 
+ScavTrap::ScavTrap(ScavTrap const & src)
+{
+	*this = src;
+	std::cout << "SC@V-TP " << _name << " is being copied !" << std::endl;
+}
+
 ScavTrap::~ScavTrap(void)
 {
 	std::cout << "SC@V-TP " << _name << " ended !" << std::endl;
