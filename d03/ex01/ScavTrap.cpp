@@ -80,13 +80,13 @@ unsigned int ScavTrap::getArmorreduc(void) const
 	return _armorreduc;
 }
 
-void ScavTrap::rangedAttack(std::string const & target)
+void ScavTrap::rangedAttack(std::string const & target) const
 {
 	std::cout << "SC@V-TP " << _name << " attacks " << target <<
 		" at range, causing " << _rangedmg << " points of damage !" << std::endl;
 }
 
-void ScavTrap::meleeAttack(std::string const & target)
+void ScavTrap::meleeAttack(std::string const & target) const
 {
 	std::cout << "SC@V-TP " << _name << " attacks " << target <<
 		" at melee, causing " << _meleedmg << " points of damage !" << std::endl;
@@ -119,7 +119,7 @@ void ScavTrap::beRepaired(unsigned int amount)
 		" health points !" << std::endl;
 }
 
-void ScavTrap::challengeNewcomer(void)
+void ScavTrap::challengeNewcomer(void) const
 {
 	std::string tab[] = {
 		"sky cannon blast",

@@ -12,9 +12,9 @@ public:
 	NinjaTrap(NinjaTrap const & src);
 	~NinjaTrap(void);
 
-	void ninjaShoebox(FragTrap const & target);
-	void ninjaShoebox(ScavTrap const & target);
-	void ninjaShoebox(NinjaTrap const & target);
+	void ninjaShoebox(FragTrap const & target) const;
+	void ninjaShoebox(ScavTrap const & target) const;
+	void ninjaShoebox(NinjaTrap const & target) const;
 };
 
 #endif

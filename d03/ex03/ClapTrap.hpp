@@ -12,8 +12,8 @@ public:
 
 	ClapTrap & operator=(ClapTrap const & rhs);
 
-	void rangedAttack(std::string const & target);
-	void meleeAttack(std::string const & target);
+	void rangedAttack(std::string const & target) const;
+	void meleeAttack(std::string const & target) const;
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 

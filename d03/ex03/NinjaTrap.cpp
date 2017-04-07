@@ -27,19 +27,19 @@ NinjaTrap::~NinjaTrap(void)
 	std::cout << "NINJ@-TP " << _name << " ended !" << std::endl;
 }
 
-void NinjaTrap::ninjaShoebox(FragTrap const & target)
+void NinjaTrap::ninjaShoebox(FragTrap const & target) const
 {
 	std::cout << "NINJ@-TP " << _name << " attack " << target.getName() <<
 		" with a Blue Suede Shoes !"<< std::endl;
 }
 
-void NinjaTrap::ninjaShoebox(ScavTrap const & target)
+void NinjaTrap::ninjaShoebox(ScavTrap const & target) const
 {
 	std::cout << "NINJ@-TP " << _name << " attack " << target.getName() <<
 		" with a Santiag !"<< std::endl;
 }
 
-void NinjaTrap::ninjaShoebox(NinjaTrap const & target)
+void NinjaTrap::ninjaShoebox(NinjaTrap const & target) const
 {
 	std::cout << "NINJ@-TP " << _name << " attack " << target.getName() <<
 		" with a Leather Boots !"<< std::endl;

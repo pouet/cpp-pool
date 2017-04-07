@@ -88,13 +88,13 @@ unsigned int ClapTrap::getArmorreduc(void) const
 	return _armorreduc;
 }
 
-void ClapTrap::rangedAttack(std::string const & target)
+void ClapTrap::rangedAttack(std::string const & target) const
 {
 	std::cout << "CL@P-TP " << _name << " attacks " << target <<
 		" at range, causing " << _rangedmg << " points of damage !" << std::endl;
 }
 
-void ClapTrap::meleeAttack(std::string const & target)
+void ClapTrap::meleeAttack(std::string const & target) const
 {
 	std::cout << "CL@P-TP " << _name << " attacks " << target <<
 		" at melee, causing " << _meleedmg << " points of damage !" << std::endl;

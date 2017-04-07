@@ -80,13 +80,13 @@ unsigned int FragTrap::getArmorreduc(void) const
 	return _armorreduc;
 }
 
-void FragTrap::rangedAttack(std::string const & target)
+void FragTrap::rangedAttack(std::string const & target) const
 {
 	std::cout << "FR4G-TP " << _name << " attacks " << target <<
 		" at range, causing " << _rangedmg << " points of damage !" << std::endl;
 }
 
-void FragTrap::meleeAttack(std::string const & target)
+void FragTrap::meleeAttack(std::string const & target) const
 {
 	std::cout << "FR4G-TP " << _name << " attacks " << target <<
 		" at melee, causing " << _meleedmg << " points of damage !" << std::endl;
