@@ -4,7 +4,17 @@
 
 ClapTrap::ClapTrap(void)
 {
-	std::cout << "CL@P-TP is born !" << std::endl;
+	_hitpt = 1;
+	_maxhitpt = 1;
+	_nrjpt = 1;
+	_maxnrjpt = 1;
+	_lvl = 1;
+	_name = "default";
+	_meleedmg = 1;
+	_rangedmg = 1;
+	_armorreduc = 0;
+
+	std::cout << "CL@P-TP " << _name << " is born !" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
