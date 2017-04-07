@@ -19,11 +19,15 @@ public:
 	void attack(Enemy * enemy);
 
 	std::string const & getName(void) const;
+	int getAP(void) const;
+	AWeapon * getWeapon(void) const;
 
 private:
 	std::string _name;
 	int _ap;
 	AWeapon * _weapon;
 };
+
+std::ostream & operator<<(std::ostream &o, Character const & rhs);
 
 #endif

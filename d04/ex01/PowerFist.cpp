@@ -3,7 +3,7 @@
 #include "PowerFist.hpp"
 
 PowerFist::PowerFist(void)
-	: AWeapon("Power Fist", 50, 8)
+	: AWeapon("Power Fist", 8, 50)
 {
 }
 

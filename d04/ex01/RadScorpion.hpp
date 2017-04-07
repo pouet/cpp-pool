@@ -10,8 +10,6 @@ public:
 	RadScorpion(void);
 	RadScorpion(RadScorpion const & enemy);
 	virtual ~RadScorpion(void);
-
-//	virtual void takeDamage(int damage);
 };
 
 #endif

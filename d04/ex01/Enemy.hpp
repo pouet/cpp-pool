@@ -15,9 +15,10 @@ public:
 	std::string const & getType(void) const;
 	int getHp(void) const;
 
-	void setHp(int);
-
 	virtual void takeDamage(int damage);
+
+protected:
+	void setHp(int);
 
 private:
 	int _hp;

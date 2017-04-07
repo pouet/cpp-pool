@@ -10,16 +10,10 @@ RadScorpion::RadScorpion(void)
 RadScorpion::RadScorpion(RadScorpion const & enemy)
 	: Enemy(enemy)
 {
-	std::cout << "* SPROTCH *" << std::endl;
+	std::cout << "* click click click *" << std::endl;
 }
 
 RadScorpion::~RadScorpion(void)
 {
+	std::cout << "* SPROTCH *" << std::endl;
 }
-
-//void RadScorpion::takeDamage(int damage)
-//{
-//	if (damage - 3 < 0)
-//		damage = 0;
-//	setHp(getHp() - damage);
-//}

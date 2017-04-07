@@ -3,7 +3,7 @@
 #include "PlasmaRifle.hpp"
 
 PlasmaRifle::PlasmaRifle(void)
-	: AWeapon("Plasma Rifle", 21, 5)
+	: AWeapon("Plasma Rifle", 5, 21)
 {
 }
 

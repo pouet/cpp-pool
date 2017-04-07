@@ -15,7 +15,6 @@ Enemy::~Enemy(void)
 {
 }
 
-
 Enemy & Enemy::operator=(Enemy const & rhs)
 {
 	_type = rhs.getType();
