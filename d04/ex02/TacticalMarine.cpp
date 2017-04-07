@@ -22,6 +22,12 @@ ISpaceMarine * TacticalMarine::clone(void) const
 	return new TacticalMarine(*this);
 }
 
+TacticalMarine & TacticalMarine::operator=(TacticalMarine const & rhs)
+{
+	(void)rhs;
+	return *this;
+}
+
 void TacticalMarine::battleCry(void) const
 {
 	std::cout << "For the holy PLOT !" << std::endl;

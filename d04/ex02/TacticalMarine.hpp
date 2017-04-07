@@ -10,7 +10,7 @@ public:
 	TacticalMarine(TacticalMarine const & src);
 	virtual ~TacticalMarine(void);
 
-	// TODO: operator = overload
+	TacticalMarine & operator=(TacticalMarine const & rhs);
 
 	ISpaceMarine * clone(void) const;
 	void battleCry(void) const;

@@ -17,6 +17,12 @@ AssaultTerminator::~AssaultTerminator(void)
 	std::cout << "I’ll be back ..." << std::endl;
 }
 
+AssaultTerminator & AssaultTerminator::operator=(AssaultTerminator const & rhs)
+{
+	(void)rhs;
+	return *this;
+}
+
 ISpaceMarine * AssaultTerminator::clone(void) const
 {
 	return new AssaultTerminator(*this);

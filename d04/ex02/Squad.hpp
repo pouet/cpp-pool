@@ -11,7 +11,7 @@ public:
 	Squad(Squad const & src);
 	~Squad(void);
 
-	// TODO: operator = overload
+	Squad & operator=(Squad const & rhs);
 
 	int getCount(void) const;
 	ISpaceMarine * getUnit(int n) const;

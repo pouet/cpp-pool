@@ -10,7 +10,7 @@ public:
 	AssaultTerminator(AssaultTerminator const & src);
 	virtual ~AssaultTerminator(void);
 
-	// TODO: operator = overload
+	AssaultTerminator & operator=(AssaultTerminator const & rhs);
 
 	ISpaceMarine * clone(void) const;
 	void battleCry(void) const;
